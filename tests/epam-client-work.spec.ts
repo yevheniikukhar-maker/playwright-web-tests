@@ -6,5 +6,5 @@ test('EPAM services menu opens client work page', async ({ page }) => {
   await page.getByRole('link', { name: 'Services' }).first().click();
   await page.getByRole('link', { name: 'Explore Our Client Work' }).first().click();
 
-  await expect(page.getByText('Client Work', { exact: true })).toBeVisible();
+  await expect(page.getByText('Client Work', { exact: true }).first()).toBeVisible();
 });
